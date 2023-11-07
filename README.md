@@ -3,35 +3,35 @@ Investigue 5 ejemplos de BufferOverflow en internet y explique como derivaron en
 
 ### Ejemplos de BufferOverflow:
 
-- **Ejemplo 1:**
+- **Ejemplo 1: CVE-2021-3156**
 
-  En este ejemplo el error radica en que el arreglo "buffer" espera recibir cinco caracteres, realiza una copia de lo
-  que recibe sin verificar cuantos caracteres son, por lo que en caso de que reciba mas de cinco se causa un buffer
-  overflow.
+  En este ejemplo el error radica en en una parte del código del programa "sudo", especificamente en la parte que gestionaba la verificación de contraseñas. El problema esta en la forma en que se manejaban ciertos caracteres especiales en las contraseñas, específicamente los caracteres '!' y '-'. Cuando un usuario intentaba utilizar una contraseña que contenía estos caracteres especiales, el "sudo" interpretaba incorrectamente la entrada y permitía que el usuario ejecutara comandos con privilegios de superusuario, incluso si no tenía permisos para hacerlo. Esto significaba que un atacante potencial podría utilizar una contraseña manipulada para eludir las restricciones de seguridad y ejecutar comandos peligrosos en el sistema.
   
-  ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/image_2023-11-06_202557125.png)
-
+  ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/CVE-2021-3156_1.png)
+  
+  ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/CVE-2021-3156_2.png)
+  
 - **Ejemplo 2:**
   sample text
-  ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/image_2023-11-06_210557868.png)
+  ![]()
 
 - **Ejemplo 3:**
  sample text
- ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/image_2023-11-06_210959371.png)
+ ![]()
 
  - **Ejemplo 4:**
  sample text
- ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/image_2023-11-06_211429596.png)
+ ![]()
 
  - **Ejemplo 5:**
  sample text
- ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/image_2023-11-06_211559041.png)
+ ![]()
 
 ---
 
 **Referencias:**
-- [Ejemplo 1](https://www.geeksforgeeks.org/buffer-overflow-attack-with-example/)
-- [Ejemplo 2](https://owasp.org/www-community/attacks/Buffer_overflow_attack)
-- [Ejemplo 3](https://cwe.mitre.org/data/definitions/122.html)
-- [Ejemplo 4](https://learn.microsoft.com/en-us/cpp/sanitizers/error-heap-buffer-overflow?view=msvc-170)
-- [Ejemplo 5](https://owasp.org/www-community/attacks/Buffer_overflow_attack)
+- [Ejemplo 1](https://blog.qualys.com/vulnerabilities-threat-research/2021/01/26/cve-2021-3156-heap-based-buffer-overflow-in-sudo-baron-samedit)
+- [Ejemplo 2]()
+- [Ejemplo 3]()
+- [Ejemplo 4]()
+- [Ejemplo 5]()
