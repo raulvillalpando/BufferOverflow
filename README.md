@@ -4,7 +4,11 @@ Investigue 5 ejemplos de BufferOverflow en internet y explique como derivaron en
 ### Ejemplos de BufferOverflow:
 
 - **Ejemplo 1:**
-  sample text
+
+  En este ejemplo el error radica en que el arreglo "buffer" espera recibir cinco caracteres, realiza una copia de lo
+  que recibe sin verificar cuantos caracteres son, por lo que en caso de que reciba mas de cinco se causa un buffer
+  overflow.
+  
   ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/image_2023-11-06_202557125.png)
 
 - **Ejemplo 2:**
