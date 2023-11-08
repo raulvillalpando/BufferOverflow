@@ -33,7 +33,7 @@ Investigue 5 ejemplos de BufferOverflow en internet y explique como derivaron en
 
   Este ejemplo afecta a la app Notepad++. Se causa un BufferOverflow en el archivo "Utf8_16.cpp", en la función "Utf8_16_Read::convert". El problema ocurre al abrir un archivo manipulado y se debe a un error que asigna un nuevo búfer para la conversión UTF16 a UTF8. Cuando la longitud de entrada es un número impar de bytes malformados, los cálculos de tamaño del búfer son incorrectos. Esto puede llevar a una escritura fuera de los límites del búfer y potencialmente permitir la ejecución de código arbitrario. 
  
- ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/Buffer%20Overflows%20in%20Notepad%2B%2B.png)
+  ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/Buffer%20Overflows%20in%20Notepad%2B%2B.png)
 
 ---
 
