@@ -23,13 +23,13 @@ Investigue 5 ejemplos de BufferOverflow en internet y explique como derivaron en
 
    ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/CVE-2023-46927.png)
 
- - **Ejemplo 4:GHSL-2023-105_ucharde**
+- **Ejemplo 4:GHSL-2023-105_ucharde**
 
   En la función "nsLanguageDetector::GetOrderFromCodePoint", se inicializa una variable max con el tamaño de un búfer global y otra variable i con la mitad de max. El problema surge cuando se intenta leer un valor del búfer usando el índice i * 2, lo que podría superar los límites reales del búfer. Esto permite a un atacante filtrar información de asignación de memoria interna, lo que potencialmente puede ser explotado para obtener datos confidenciales o ejecutar código malicioso en el sistema.
  
   ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/GHSL-2023-105_uchardet.png)
 
- - **Ejemplo 5:Buffer Overflows_in_Notepad++**
+- **Ejemplo 5:Buffer Overflows_in_Notepad++**
 
   Este ejemplo afecta a la app Notepad++. Se causa un BufferOverflow en el archivo "Utf8_16.cpp", en la función "Utf8_16_Read::convert". El problema ocurre al abrir un archivo manipulado y se debe a un error que asigna un nuevo búfer para la conversión UTF16 a UTF8. Cuando la longitud de entrada es un número impar de bytes malformados, los cálculos de tamaño del búfer son incorrectos. Esto puede llevar a una escritura fuera de los límites del búfer y potencialmente permitir la ejecución de código arbitrario. 
  
