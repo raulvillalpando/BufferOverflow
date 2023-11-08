@@ -19,7 +19,7 @@ Investigue 5 ejemplos de BufferOverflow en internet y explique como derivaron en
 
 - **Ejemplo 3 CVE-2023-46927:**
 
- Para este caso se afecta específicamente la app "MP4Box". Se causa un BufferOverflow en el archivo isom_write_c. El problema se encuentra en el manejo incorrecto de los datos de tamaño de muestra (sampleSize) en la tabla stsz. El error se produce cuando se intenta escribir más datos de los que la ubicación de memoria puede contener. Se está sobrescribiendo la memoria más allá de los límites que deberían respetarse.
+  Para este caso se afecta específicamente la app "MP4Box". Se causa un BufferOverflow en el archivo isom_write_c. El problema se encuentra en el manejo incorrecto de los datos de tamaño de muestra (sampleSize) en la tabla stsz. El error se produce cuando se intenta escribir más datos de los que la ubicación de memoria puede contener. Se está sobrescribiendo la memoria más allá de los límites que deberían respetarse.
 
  ![](https://github.com/raulvillalpando/BufferOverflow/blob/main/CVE-2023-46927.png)
 
